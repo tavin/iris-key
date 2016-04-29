@@ -24,7 +24,9 @@ shinyUI(fluidPage(
       p("This is a demonstration of a simple classification tree trained on the ",
         a(href="http://www.inside-r.org/r-doc/datasets/iris", "iris data set"), "."),
       p("Choose the petal length and width using the sliders. The predicted species is
-         shown underneath. A plot of the classification tree is also shown as a guide.")
+         shown underneath. A plot of the classification tree is also shown as a guide."),
+      p("Source repository: ",
+        a(href="https://github.com/tavin/iris-key", "https://github.com/tavin/iris-key"))
     )
   )
 ))
