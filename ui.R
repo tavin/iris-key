@@ -10,8 +10,8 @@ shinyUI(fluidPage(
   sidebarLayout(
     mainPanel(
       wellPanel(
-        sliderInput("Petal.Length", "Petal Length", min = 0, max = 10, value = 0),
-        sliderInput("Petal.Width", "Petal Width", min = 0, max = 10, value = 0)
+        sliderInput("Petal.Length", "Petal Length", min=0, max=5, step=0.1, value=0),
+        sliderInput("Petal.Width", "Petal Width", min=0, max=5, step=0.1, value=0)
       ),
       h3("Predicted Species"),
       wellPanel(
