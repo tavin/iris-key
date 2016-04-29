@@ -2,6 +2,9 @@
 
 library(shiny)
 
+plotStyle <- "background: no-repeat center
+              url('https://upload.wikimedia.org/wikipedia/commons/7/78/24px-spinner-0645ad.gif')"
+
 shinyUI(fluidPage(
   titlePanel("Iris Key"),
   sidebarLayout(
@@ -15,7 +18,7 @@ shinyUI(fluidPage(
         textOutput("Species")
       ),
       h3("Classification Tree"),
-      plotOutput("Plot")
+      div(class="well", style=plotStyle, plotOutput("Plot"))
     ),
     sidebarPanel(
       p("This is a demonstration of a simple classification tree trained on the ",
