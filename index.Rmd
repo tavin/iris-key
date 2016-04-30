@@ -1,0 +1,48 @@
+---
+title       : Iris Key
+subtitle    : A classification tree web application
+author      : Tavin Cole
+job         : Student
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      #
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## A brief survey
+
+* Are you tired of carrying cumbersome printed iris identification keys into the field?
+* Are you required to grade my submission for the Developing Data Products course project?
+* Do you enjoy working with the [iris data set](http://www.inside-r.org/r-doc/datasets/iris)?
+
+---
+
+## You know, the iris data set
+
+```{r}
+str(iris)
+```
+
+---
+
+## The answer is ...
+
+If you answered yes to any survey question, please visit my Iris Key application:
+
+https://tavin.shinyapps.io/iris-key/
+
+Please also review the source code:
+
+https://github.com/tavin/iris-key
+
+---
+
+## Thank you and please enjoy some more R code
+
+```{r}
+library(caret); library(rpart); library(rpart.plot)
+set.seed(226837434)
+train(Species ~ ., data = iris, method = 'rpart')$finalModel
+```
